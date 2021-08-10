@@ -1,0 +1,503 @@
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+1436 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1791 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+1794 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1951 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+6614 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+14414 [AWT-EventQueue-0] ERROR ca.sqlpower.architect.swingui.KettleDataSourceOptionsPanel  -  The map is: {Hostname=, Port=3306, Database=}
+18442 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class com.mysql.jdbc.Driver loaded without exception
+19119 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class com.mysql.jdbc.Driver loaded without exception
+25806 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown column property autoIncrementSequenceName changed while monitoring pkTable
+25842 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+CREATE TABLE dim_fecha (
+                fecha DATE NOT NULL,
+                mes VARCHAR(20) NOT NULL,
+                dia VARCHAR(20) NOT NULL,
+                anio VARCHAR(20) NOT NULL,
+                PRIMARY KEY (fecha)
+)
+25844 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE Station (
+                idStation INT NOT NULL,
+                name VARCHAR(30) NOT NULL,
+                address VARCHAR(20) NOT NULL,
+                lon INT NOT NULL,
+                lat DOUBLE PRECISION NOT NULL,
+                elevation INT NOT NULL,
+                PRIMARY KEY (idStation)
+)
+25846 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE TOL (
+                idTOL INT AUTO_INCREMENT NOT NULL,
+                TOL DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idTOL)
+)
+25847 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE THC (
+                idTHC INT AUTO_INCREMENT NOT NULL,
+                THC DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idTHC)
+)
+25848 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE SO_2 (
+                idSO_2 INT AUTO_INCREMENT NOT NULL,
+                SO_2 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idSO_2)
+)
+25849 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE PM25 (
+                idPM25 INT AUTO_INCREMENT NOT NULL,
+                PM25 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idPM25)
+)
+25850 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE PM10 (
+                idPM10 INT AUTO_INCREMENT NOT NULL,
+                PM10 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idPM10)
+)
+25851 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE O_3 (
+                idO_3 INT AUTO_INCREMENT NOT NULL,
+                O_3 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idO_3)
+)
+25851 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE NO_2 (
+                idNO_2 INT AUTO_INCREMENT NOT NULL,
+                NO_2 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idNO_2)
+)
+25852 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE NO (
+                idNO INT AUTO_INCREMENT NOT NULL,
+                NO DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idNO)
+)
+25854 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE NMHC (
+                idNMHC INT AUTO_INCREMENT NOT NULL,
+                NMHC DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idNMHC)
+)
+25855 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE EBE (
+                idEBE INT AUTO_INCREMENT NOT NULL,
+                EBE DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idEBE)
+)
+25856 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE CO (
+                idCO INT AUTO_INCREMENT NOT NULL,
+                CO DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idCO)
+)
+25859 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE BEN (
+                idBEN INT AUTO_INCREMENT NOT NULL,
+                BEN DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idBEN)
+)
+25860 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE Hechos_Madrid_Air (
+                idLectura INT AUTO_INCREMENT NOT NULL,
+                idTOL INT NOT NULL,
+                idSO_2 INT NOT NULL,
+                idTHC INT NOT NULL,
+                idBEN INT NOT NULL,
+                idPM25 INT NOT NULL,
+                idNMHC INT NOT NULL,
+                idNO_2 INT NOT NULL,
+                idStation INT NOT NULL,
+                idO_3 INT NOT NULL,
+                idPM10 INT NOT NULL,
+                idEBE INT NOT NULL,
+                idCO INT NOT NULL,
+                fecha DATE NOT NULL,
+                idNO INT NOT NULL,
+                PRIMARY KEY (idLectura)
+)
+25864 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT dim_fecha_hechos_madrid_air_fk
+FOREIGN KEY (fecha)
+REFERENCES dim_fecha (fecha)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25867 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT station_hechos_madrid_air_fk
+FOREIGN KEY (idStation)
+REFERENCES Station (idStation)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25870 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT tol_hechos_madrid_air_fk
+FOREIGN KEY (idTOL)
+REFERENCES TOL (idTOL)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25874 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT thc_hechos_madrid_air_fk
+FOREIGN KEY (idTHC)
+REFERENCES THC (idTHC)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25878 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT so_2_hechos_madrid_air_fk
+FOREIGN KEY (idSO_2)
+REFERENCES SO_2 (idSO_2)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25881 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT pm25_hechos_madrid_air_fk
+FOREIGN KEY (idPM25)
+REFERENCES PM25 (idPM25)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25883 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT pm10_hechos_madrid_air_fk
+FOREIGN KEY (idPM10)
+REFERENCES PM10 (idPM10)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25886 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT o_3_hechos_madrid_air_fk
+FOREIGN KEY (idO_3)
+REFERENCES O_3 (idO_3)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25890 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT no_2_hechos_madrid_air_fk
+FOREIGN KEY (idNO_2)
+REFERENCES NO_2 (idNO_2)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25893 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT no_hechos_madrid_air_fk
+FOREIGN KEY (idNO)
+REFERENCES NO (idNO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25896 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT nmhc_hechos_madrid_air_fk
+FOREIGN KEY (idNMHC)
+REFERENCES NMHC (idNMHC)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25898 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT ebe_hechos_madrid_air_fk
+FOREIGN KEY (idEBE)
+REFERENCES EBE (idEBE)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25901 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT co_hechos_madrid_air_fk
+FOREIGN KEY (idCO)
+REFERENCES CO (idCO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25903 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT ben_hechos_madrid_air_fk
+FOREIGN KEY (idBEN)
+REFERENCES BEN (idBEN)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+25915 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :29
+34940 [Thread-8] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class com.mysql.jdbc.Driver loaded without exception
+35564 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35565 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35565 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35566 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35566 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35566 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35566 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35567 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35567 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35568 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35568 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35568 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35568 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+35569 [Thread-8] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+38020 [Thread-10] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class com.mysql.jdbc.Driver loaded without exception
+38042 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - Starting DDL Generation at Fri Jun 04 09:58:51 BOT 2021
+38043 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - Database Target: (Target Database)
+38043 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - Playpen Dump: (Target Database)
+38044 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+CREATE TABLE dim_fecha (
+                fecha DATE NOT NULL,
+                mes VARCHAR(20) NOT NULL,
+                dia VARCHAR(20) NOT NULL,
+                anio VARCHAR(20) NOT NULL,
+                PRIMARY KEY (fecha)
+)
+38206 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE Station (
+                idStation INT NOT NULL,
+                name VARCHAR(30) NOT NULL,
+                address VARCHAR(20) NOT NULL,
+                lon INT NOT NULL,
+                lat DOUBLE PRECISION NOT NULL,
+                elevation INT NOT NULL,
+                PRIMARY KEY (idStation)
+)
+38248 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE TOL (
+                idTOL INT AUTO_INCREMENT NOT NULL,
+                TOL DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idTOL)
+)
+38290 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE THC (
+                idTHC INT AUTO_INCREMENT NOT NULL,
+                THC DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idTHC)
+)
+38335 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE SO_2 (
+                idSO_2 INT AUTO_INCREMENT NOT NULL,
+                SO_2 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idSO_2)
+)
+38375 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE PM25 (
+                idPM25 INT AUTO_INCREMENT NOT NULL,
+                PM25 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idPM25)
+)
+38418 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE PM10 (
+                idPM10 INT AUTO_INCREMENT NOT NULL,
+                PM10 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idPM10)
+)
+38560 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE O_3 (
+                idO_3 INT AUTO_INCREMENT NOT NULL,
+                O_3 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idO_3)
+)
+38603 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE NO_2 (
+                idNO_2 INT AUTO_INCREMENT NOT NULL,
+                NO_2 DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idNO_2)
+)
+38642 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE NO (
+                idNO INT AUTO_INCREMENT NOT NULL,
+                NO DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idNO)
+)
+38685 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE NMHC (
+                idNMHC INT AUTO_INCREMENT NOT NULL,
+                NMHC DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idNMHC)
+)
+38727 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE EBE (
+                idEBE INT AUTO_INCREMENT NOT NULL,
+                EBE DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idEBE)
+)
+38765 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE CO (
+                idCO INT AUTO_INCREMENT NOT NULL,
+                CO DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idCO)
+)
+38805 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE BEN (
+                idBEN INT AUTO_INCREMENT NOT NULL,
+                BEN DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (idBEN)
+)
+38843 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE TABLE Hechos_Madrid_Air (
+                idLectura INT AUTO_INCREMENT NOT NULL,
+                idTOL INT NOT NULL,
+                idSO_2 INT NOT NULL,
+                idTHC INT NOT NULL,
+                idBEN INT NOT NULL,
+                idPM25 INT NOT NULL,
+                idNMHC INT NOT NULL,
+                idNO_2 INT NOT NULL,
+                idStation INT NOT NULL,
+                idO_3 INT NOT NULL,
+                idPM10 INT NOT NULL,
+                idEBE INT NOT NULL,
+                idCO INT NOT NULL,
+                fecha DATE NOT NULL,
+                idNO INT NOT NULL,
+                PRIMARY KEY (idLectura)
+)
+38883 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT dim_fecha_hechos_madrid_air_fk
+FOREIGN KEY (fecha)
+REFERENCES dim_fecha (fecha)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+38971 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT station_hechos_madrid_air_fk
+FOREIGN KEY (idStation)
+REFERENCES Station (idStation)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39050 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT tol_hechos_madrid_air_fk
+FOREIGN KEY (idTOL)
+REFERENCES TOL (idTOL)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39135 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT thc_hechos_madrid_air_fk
+FOREIGN KEY (idTHC)
+REFERENCES THC (idTHC)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39207 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT so_2_hechos_madrid_air_fk
+FOREIGN KEY (idSO_2)
+REFERENCES SO_2 (idSO_2)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39284 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT pm25_hechos_madrid_air_fk
+FOREIGN KEY (idPM25)
+REFERENCES PM25 (idPM25)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39347 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT pm10_hechos_madrid_air_fk
+FOREIGN KEY (idPM10)
+REFERENCES PM10 (idPM10)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39405 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT o_3_hechos_madrid_air_fk
+FOREIGN KEY (idO_3)
+REFERENCES O_3 (idO_3)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39458 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT no_2_hechos_madrid_air_fk
+FOREIGN KEY (idNO_2)
+REFERENCES NO_2 (idNO_2)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39544 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT no_hechos_madrid_air_fk
+FOREIGN KEY (idNO)
+REFERENCES NO (idNO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39706 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT nmhc_hechos_madrid_air_fk
+FOREIGN KEY (idNMHC)
+REFERENCES NMHC (idNMHC)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39783 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT ebe_hechos_madrid_air_fk
+FOREIGN KEY (idEBE)
+REFERENCES EBE (idEBE)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39858 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT co_hechos_madrid_air_fk
+FOREIGN KEY (idCO)
+REFERENCES CO (idCO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+39961 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE Hechos_Madrid_Air ADD CONSTRAINT ben_hechos_madrid_air_fk
+FOREIGN KEY (idBEN)
+REFERENCES BEN (idBEN)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+40045 [Thread-10] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - Successfully executed 29 out of 29 statements.

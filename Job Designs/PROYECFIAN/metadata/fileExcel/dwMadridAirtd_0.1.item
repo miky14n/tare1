@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_zSc-IMTDEeuN9_JYX73rxA" name="dwMadridAirtd" dataPackage="_zSc-IcTDEeuN9_JYX73rxA" Server="Localhost 127.0.0.1" FilePath="D:/Universidad/Sin info 2/proyecto/madrid_merged.xls" Encoding="UTF-8" UseHeader="true" HeaderValue="1" FirstLineCaption="true" SheetName="madrid_2014" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" selectAllSheets="true" sheetList="madrid_2014:w&#xA;madrid_2015:w&#xA;madrid_2016:w&#xA;madrid_2017:w&#xA;madrid_2018:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+    <sheetColumns>I</sheetColumns>
+    <sheetColumns>J</sheetColumns>
+    <sheetColumns>K</sheetColumns>
+    <sheetColumns>L</sheetColumns>
+    <sheetColumns>M</sheetColumns>
+    <sheetColumns>N</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_zSc-IcTDEeuN9_JYX73rxA" name="default" dataManager="_zSc-IMTDEeuN9_JYX73rxA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_zSc-IsTDEeuN9_JYX73rxA" id="_G33T8MTDEeuN9_JYX73rxA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-I8TDEeuN9_JYX73rxA" label="date" length="-1" talendType="id_Date" pattern="&quot;dd/mm/aaaa hh:mm&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-JMTDEeuN9_JYX73rxA" label="BEN" length="8" precision="2" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-JcTDEeuN9_JYX73rxA" label="CO" length="8" precision="2" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-JsTDEeuN9_JYX73rxA" label="EBE" length="8" precision="2" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-J8TDEeuN9_JYX73rxA" label="NMHC" length="8" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-KMTDEeuN9_JYX73rxA" label="NO" length="8" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-KcTDEeuN9_JYX73rxA" label="NO_2" length="8" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-KsTDEeuN9_JYX73rxA" label="O_3" length="8" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-K8TDEeuN9_JYX73rxA" label="PM10" length="8" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-LMTDEeuN9_JYX73rxA" label="PM25" length="8" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-LcTDEeuN9_JYX73rxA" label="SO_2" length="8" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-LsTDEeuN9_JYX73rxA" label="TCH" length="8" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-L8TDEeuN9_JYX73rxA" label="TOL" length="8" precision="2" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_zSc-MMTDEeuN9_JYX73rxA" label="station" length="12" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_cX-4kMTmEeuN9_JYX73rxA" name="DWMADRID_AIRCargado" id="_XPSgcMTmEeuN9_JYX73rxA" label="DWMADRID_AIRCargado" dataPackage="_cZVjcMTmEeuN9_JYX73rxA" DatabaseType="MySQL" DriverClass="org.mariadb.jdbc.Driver" URL="jdbc:mariadb://localhost:3306/DWMADRID_AIRCargado?noDatetimeStringSync=true" dbVersionString="MARIADB" Port="3306" Username="root" Password="" ServerName="localhost" DatasourceName="" FileFieldName="" SID="DWMADRID_AIRCargado" SqlSynthax="" StringQuote="" NullChar="" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_cX-4kcTmEeuN9_JYX73rxA" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_cYiSMMTmEeuN9_JYX73rxA" tag="package filter" value=""/>
+    <taggedValue xmi:id="_cYiSMcTmEeuN9_JYX73rxA" tag="Status" value=""/>
+    <taggedValue xmi:id="_cYiSMsTmEeuN9_JYX73rxA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_cYiSM8TmEeuN9_JYX73rxA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_cYiSNMTmEeuN9_JYX73rxA" tag="Description" value=""/>
+    <taggedValue xmi:id="_cYiSNcTmEeuN9_JYX73rxA" tag="Author" value=""/>
+    <taggedValue xmi:id="_cYiSNsTmEeuN9_JYX73rxA" tag="otherParameter"/>
+    <taggedValue xmi:id="_cZRSAMTmEeuN9_JYX73rxA" tag="DB ProductName" value="MariaDB"/>
+    <taggedValue xmi:id="_cZRSAcTmEeuN9_JYX73rxA" tag="DB ProductVersion" value="10.4.18-MariaDB"/>
+    <taggedValue xmi:id="_cZRSAsTmEeuN9_JYX73rxA" tag="DB IdentifierQuoteString" value="`"/>
+    <parameters xmi:id="_cX-4ksTmEeuN9_JYX73rxA" key="CONN_PARA_KEY_USERNAME" value="root"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_cZVjcMTmEeuN9_JYX73rxA" name="DWMADRID_AIRCargado" dataManager="_cX-4kMTmEeuN9_JYX73rxA"/>
+</xmi:XMI>
